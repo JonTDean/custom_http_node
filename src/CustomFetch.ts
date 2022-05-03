@@ -21,7 +21,7 @@ const CustomFetch = async <T = FetchGeneric>(
             // which makes sense due to the fact that it is coming in
             // as a stream of data.
             res.on("data", (d: Uint8Array) => {
-                process.stdout.write(d);
+                // process.stdout.write(d);
                 finalResponse += d;
             });
 
