@@ -43,16 +43,16 @@ While taking advantage of the Request and Response objects we can combine the lo
 Implementation
 └── Pending
 	├── Response (From the request)
-    |	└── on
+	|	└── on
 	|		├── data
 	|		|	└── Fulfill
 	|		|		└── "Once the stream of chunks stops, the data is passed to the ƒ(resolve)"
-	|   	|
-    |		└─── error
-	|			 └── Reject
-	|			 	└── "On erroring out, the error is passed to ƒ(rejection)"
+	|		|
+	|		└─── error
+	|			└── Reject
+	|				└── "On erroring out, the error is passed to ƒ(rejection)"
 	└── end
-   		└── "When the request is completes it destroys itself"
+		└── "When the request is completes it destroys itself"
 ```
 
 The Promise implementation is a bit more complex, but it is a lot more flexible and can be used in a variety of different situations, while not being feature compelete (Polyfills for multi-browser support, handling different HTTP verbiage, and handling extreme edge cases), it reaches the minimum viable qualifications for my needs.
