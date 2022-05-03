@@ -4,6 +4,11 @@ Trawling through an onslaught of interviews and an inummerable measure of Hacker
 
 During the course of my test taking, I had run into a question twice that had given me issues; writing a custom HTTP implementation. I pride myeself on knowing the basics, yet not once but twice, I had not been able to do just that, create a custom implementation of an http query using the standard node library. This was a great learning experience, and I am proud of it, I will struggle and grow so my failures do not occur more than twice, the second time is a mistake and the third time shows a lack of growth.
 
+### Documentation:
+
+- [HTTPS](https://nodejs.org/api/https.html)
+- [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 # What I Learned
 
 The HTTP Package system follows a similar pattern to the Promise system, but with a few key differences. The differences are highlighted in the key fact that the HTTP package is not a promise, but a request.
