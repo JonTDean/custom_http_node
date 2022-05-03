@@ -1,5 +1,5 @@
 {
-    "include": ["src", "tests"],
+    "include": ["src", "tests", "index.ts"],
     "exclude": [
         "node_modules",
         ".husky/",
