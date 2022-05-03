@@ -6,12 +6,12 @@ During the course of my test taking, I had run into a question twice that had gi
 
 ### Documentation:
 
-- [HTTPS](https://nodejs.org/api/https.html)
-- [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+-   [HTTPS](https://nodejs.org/api/https.html)
+-   [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 # What I Learned
 
-The HTTP Package system follows a similar pattern to the Promise system, but with a few key differences. The differences are highlighted in the key fact that the HTTP package is not a promise, but a request.
+The HTTP Package system follows a similar pattern to the Promise system, but with a few key differences. The differences are highlighted in the key fact that the HTTP package is not a promise, but a continuous series of requests that are split up into Chunks (Type of <UInt8Array>) that are captured until the stream "ends".
 
 A basic tree model of what I used for the HTTP package is shown below.
 
