@@ -1,6 +1,8 @@
 {
     // ext install esbenp.prettier-vscode
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    //! Uncomment these if you want to format on
+	//! last keystroke and paste
+    // "editor.formatOnPaste": true,
+    // "editor.formatOnSave": true
 }
