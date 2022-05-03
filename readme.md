@@ -14,16 +14,16 @@ A basic tree model of what I used for the HTTP package is shown below.
 HTTP
 └── Request
 	├── Response (From the request)
-    |	└── on
+	|	└── on
 	|		├── data
 	|		|	└──"Data is coming in chunks and is being stored in a buffer"
 	|		|
 	|		└── end
 	|			└──"When chunks stop being sent over the stream, the data is assigned to the provided object"
-    ├── on
-    |	└─── error
+	├── on
+	|	└─── error
 	|		└── "If there is an error, the error is assigned to the provided object"
-    └── end
+	└── end
    		└── "When the request is completes it destroys itself"
 ```
 
