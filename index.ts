@@ -1,34 +1,18 @@
-import { ClientRequest } from "http";
-import https from "https";
+import CustomFetch from "./src/CustomFetch";
+import HRMockModel from "./src/HRMockModel";
+import FetchOptions from "./src/utils/FetchOptions";
 
-const options = {
-    // Target URI to send the request to
-    hostname: "jsonmock.hackerrank.com",
-    // Default port for HTTPS
-    port: 443,
-    // Specific URI path to request
-    path: "/api/articles?page=0",
-    // Specify HTTP Method
-    method: "GET",
-};
+CustomFetch<HRMockModel>(FetchOptions)
+    .then((data) => {
+        // process.stdout.write(data);
+        // if(data)
+        // 	data.map((e) => process.stdout.write(e));
+        return data;
+    })
+    .catch((err) => console.log(err));
 
-// Create a new request object that
-// targets the specfied options key values
-const req: ClientRequest = https.request(options, (res) => {
-    process.stdout.write(`statusCode: ${res.statusCode}`);
-    process.stdout.write(`headers: ${res.headers}`);
-
-    res.on("data", (d) => {
-        process.stdout.write(d);
-    });
-});
-
-// Handle errors and catch
-// them before they error out the process
-req.on("error", (e) => {
-    process.stderr.write(e as unknown as string);
-});
-
-// Close the request to free up resources
-// and avoid memory leaks
-req.end();
+// console.log("DATA: ", data);
+// // Log each of the articles
+// for (const obj in data) {
+//     process.stdout.write(obj);
+// }
