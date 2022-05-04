@@ -1,11 +1,9 @@
 import { ClientRequest } from "http";
-import https from "https";
-import { FetchGeneric, FetchOpts } from "./utils/fetchTypes";
+import * as https from "https";
+import { FetchOpts } from "./utils/FetchTypes";
 
 // Custom Fetch Implementation
-const CustomFetch = async <T = FetchGeneric>(
-    options: FetchOpts,
-): Promise<T> => {
+const CustomFetch = async (options: FetchOpts): Promise<string> => {
     // Set the type of the return value to be a Record of strings and objects
     return new Promise((resolve, reject) => {
         const req: ClientRequest = https.request(options, (res) => {
@@ -28,7 +26,7 @@ const CustomFetch = async <T = FetchGeneric>(
             // This is the end of the response that is called
             // when the data stream stops.
             res.on("end", () => {
-                resolve(JSON.parse(finalResponse));
+                resolve(finalResponse);
             });
         });
 

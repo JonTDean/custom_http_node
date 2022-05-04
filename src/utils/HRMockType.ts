@@ -1,4 +1,4 @@
-type HRMockModel = {
+type HRMockType = {
     page: number;
     per_page: number;
     total: number;
@@ -16,4 +16,4 @@ type HRMockModel = {
     }>;
 };
 
-export default HRMockModel;
+export default HRMockType;

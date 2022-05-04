@@ -1,4 +1,4 @@
-import { FetchOpts } from "./fetchTypes";
+import { FetchOpts } from "./FetchTypes";
 
 const options: FetchOpts = {
     // Target URI to send the request to

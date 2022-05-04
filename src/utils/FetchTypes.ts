@@ -1,4 +1,4 @@
-import https from "https";
+import * as https from "https";
 
 // Create a binary data type
 type FetchOpts = string | https.RequestOptions;

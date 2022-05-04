@@ -1,8 +1,7 @@
 import CustomFetch from "./src/CustomFetch";
-import HRMockModel from "./src/HRMockModel";
 import FetchOptions from "./src/utils/FetchOptions";
 
-CustomFetch<HRMockModel>(FetchOptions)
+CustomFetch(FetchOptions)
     .then((r) => {
         console.log(r);
         return r;
