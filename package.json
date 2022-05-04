@@ -19,6 +19,7 @@
 	},
 	"scripts": {
 		"dev": "ts-node-dev --respawn --deps index.ts",
+		"build": "tsc -b",
 		"lint": "eslint . --ext .ts",
 		"lint-fix": "eslint . --ext .ts --fix",
 		"prettier": "prettier --write --config .prettierrc 'src/**/*.ts'",
